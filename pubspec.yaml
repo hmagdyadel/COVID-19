@@ -1,0 +1,55 @@
+name: covid_19
+description: A new Flutter application.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  url_launcher:
+  shared_preferences: ^0.5.7+2
+  http:
+  fl_chart:
+  intl:
+  flutter_bloc: ^3.2.0
+  equatable:
+  provider:
+  flutter_colorpicker: ^0.2.3
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: "^0.7.3"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/covid-19.jpg"
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/running.png
+    - assets/icons/covid-19.jpg
+    - assets/icons/moon.jpg
+    - assets/icons/
+
+  fonts:
+    - family: Circular
+      fonts:
+        - asset: fonts/CircularStd-Medium.ttf
+        - asset: fonts/CircularAir-light.ttf
+          weight: 100
+        - asset: fonts/CircularStd-Bold.ttf
+          weight: 500
