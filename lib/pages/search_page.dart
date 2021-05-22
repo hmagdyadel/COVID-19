@@ -19,7 +19,7 @@ class DataSearch extends SearchDelegate<String> {
 
   Future getSearchData() async {
     var url = "https://corona.lmao.ninja/v2/countries?sort=cases";
-    var response = await http.get(url);
+    var response = await http.get(Uri.parse(url));
     var body = json.decode(response.body);
     for (int i = 0; i < body.length; i++) {
       if (body[i]['country'] == query) {

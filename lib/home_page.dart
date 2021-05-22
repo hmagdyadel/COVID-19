@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   bool isDarkTheme = false;
 
   fetchWorldWideDate() async {
-    http.Response response = await http.get('https://corona.lmao.ninja/v2/all');
+    http.Response response = await http.get(Uri.parse('https://corona.lmao.ninja/v2/all'));
     setState(() {
       worldData = json.decode(response.body);
     });
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
 
   fetchCountriesData() async {
     http.Response response =
-        await http.get('https://corona.lmao.ninja/v2/countries?sort=cases');
+        await http.get(Uri.parse('https://corona.lmao.ninja/v2/countries?sort=cases'));
     setState(() {
       countriesData = json.decode(response.body);
     });
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
 
   fetchHistoryData() async {
     http.Response response =
-        await http.get('https://corona.lmao.ninja/v2/historical/all');
+        await http.get(Uri.parse('https://corona.lmao.ninja/v2/historical/all'));
     setState(() {
       historyData = json.decode(response.body);
     });

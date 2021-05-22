@@ -17,7 +17,7 @@ class _CountryPageState extends State<CountryPage> {
 
   Future getData() async {
     var url = "https://corona.lmao.ninja/v2/countries?sort=cases";
-    var response = await http.get(url);
+    var response = await http.get(Uri.parse(url));
     var body = json.decode(response.body);
     for (int i = 0; i < body.length; i++) {
       listSearch.add(body[i]['country']);
@@ -48,7 +48,7 @@ class _CountryPageState extends State<CountryPage> {
 
   fetchWorldWideDate() async {
     http.Response response =
-        await http.get('https://corona.lmao.ninja/v2/countries?sort=cases');
+        await http.get(Uri.parse('https://corona.lmao.ninja/v2/countries?sort=cases'));
     setState(() {
       countriesData = json.decode(response.body);
     });
